@@ -1,0 +1,37 @@
+Numero teleonico Validacion.
+in Indicador de pais y sin espacios: \d{10}$[^A-Za-z]*$
+Con Indicador, puntos, espacios que pueden estar mas de una vez:
+[(]?[+]*[0-9]{1,4}[)]?[$0-9-\s\.]+$
+
+Validacion de correos con RegEx
+
+[^\s^[^@]+@[^@]+\.[a-zA-Z]{2,}$
+
+
+[^\s = Aqui No admitimos espacios en la funcion.
+^[^@]+@[^@]+ = Esta funcion hace que solo se admita una vez el @, y
+que no reconozca el resto del string si tiena otro @.
+
+tambien los circunflejo(^)  sirven para indicar que haya una coincidencia con un caracter
+cuando se produce el texto buscado
+
+\.[a-zA-Z]{2,}$ = Esta funcion es para añadir cualquier tipo de digitos
+u letras, y sin restriccion de algunos caracteres especiales
+
+y que despues que el @ haya sido puesto, se espera que al final del punto
+cuente por lo menos con 2 letras (Modificable)
+
+Contraseña con requerimientos: 
+^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$
+
+(?=.*?[A-Z]) = Al menos una letra mayúscula.
+
+(?=.*?[a-z]) = Al menos una letra minúscula.
+
+(?=.*?[0-9]) = Al menos un digito.
+
+(?=.*?[#?!@$%^&*-]) = Al menos un personaje especial.
+
+.{8,} = Minimo 8 de longitud.
+
+
